@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tupo Visual — Minecraft Visual Mod</title>
+<style>
+  :root{--bg:#0d0518;--bg-2:#150726;--card:#1c0d33;--border:#3d1a6e;--accent:#a855f7;--accent-2:#c084fc;--accent-3:#7c3aed;--text:#ede4ff;--muted:#a794c9;--glow:0 0 40px rgba(168,85,247,.45)}
+  *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+  body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+  body::before{content:'';position:fixed;inset:0;background:radial-gradient(circle at 20% 10%,rgba(168,85,247,.25),transparent 45%),radial-gradient(circle at 80% 80%,rgba(124,58,237,.2),transparent 45%);pointer-events:none;z-index:0}
+  .wrap{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:0 24px}
+  header{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+  .logo{font-size:22px;font-weight:800;background:linear-gradient(90deg,var(--accent-2),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  nav a{color:var(--muted);text-decoration:none;margin-left:24px;font-size:14px;font-weight:500;transition:color .2s}
+  nav a:hover{color:var(--accent-2)}
+  .hero{text-align:center;padding:90px 0 70px}
+  .badge{display:inline-block;padding:6px 16px;border:1px solid var(--border);border-radius:999px;font-size:13px;color:var(--accent-2);background:rgba(168,85,247,.08);margin-bottom:24px}
+  .hero h1{font-size:clamp(38px,6vw,68px);font-weight:800;line-height:1.1;margin-bottom:22px;letter-spacing:-1px}
+  .hero h1 span{background:linear-gradient(135deg,var(--accent-2),var(--accent-3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  .hero p{font-size:18px;color:var(--muted);max-width:620px;margin:0 auto 40px}
+  .buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;padding:14px 32px;border-radius:12px;font-weight:600;font-size:15px;text-decoration:none;transition:all .25s;cursor:pointer;border:none}
+  .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent-3));color:#fff;box-shadow:var(--glow)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 0 60px rgba(168,85,247,.65)}
+  .btn-ghost{background:transparent;color:var(--accent-2);border:1px solid var(--border)}
+  .btn-ghost:hover{background:rgba(168,85,247,.1);border-color:var(--accent)}
+  section{padding:70px 0}
+  .section-title{font-size:32px;font-weight:700;margin-bottom:12px;text-align:center}
+  .section-sub{text-align:center;color:var(--muted);margin-bottom:50px;font-size:16px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+  .card{background:linear-gradient(160deg,var(--card),var(--bg-2));border:1px solid var(--border);border-radius:16px;padding:24px;transition:all .3s;position:relative;overflow:hidden}
+  .card:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 10px 40px rgba(168,85,247,.25)}
+  .card-icon{font-size:28px;margin-bottom:12px;display:block}
+  .card h3{font-size:17px;font-weight:700;margin-bottom:8px;color:var(--accent-2)}
+  .card p{font-size:14px;color:var(--muted);line-height:1.5}
+  .about{background:linear-gradient(160deg,var(--card),var(--bg-2));border:1px solid var(--border);border-radius:20px;padding:50px 40px;text-align:center;max-width:800px;margin:0 auto}
+  .about p{color:var(--muted);font-size:16px}
+  .stats{display:flex;justify-content:center;gap:50px;margin-top:36px;flex-wrap:wrap}
+  .stat-num{font-size:32px;font-weight:800;background:linear-gradient(135deg,var(--accent-2),var(--accent-3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  .stat-label{font-size:13px;color:var(--muted);margin-top:4px}
+  footer{text-align:center;padding:40px 0 30px;color:var(--muted);font-size:13px;border-top:1px solid var(--border);margin-top:40px}
+  footer a{color:var(--accent-2);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">◆ Tupo Visual</div>
+    <nav>
+      <a href="#features">Функции</a>
+      <a href="#about">О моде</a>
+      <a href="#download">Скачать</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="badge">Minecraft 1.21.1 · Fabric</div>
+    <h1>Визуалы, которые <span>просто работают</span></h1>
+    <p>Tupo Visual — клиентский мод с чистыми визуальными фичами, HUD-элементами и оптимизацией. Без лишнего, без лагов, без мусора.</p>
+    <div class="buttons">
+      <a href="#download" class="btn btn-primary">Скачать JAR</a>
+      <a href="#features" class="btn btn-ghost">Посмотреть функции</a>
+    </div>
+  </section>
+
+  <section id="features">
+    <h2 class="section-title">Что внутри</h2>
+    <p class="section-sub">17 модулей, каждый можно включить и выключить отдельно</p>
+    <div class="grid">
+      <div class="card"><span class="card-icon">🎯</span><h3>Target Visual</h3><p>Рамка и инфо о мобе под прицелом: HP, имя, дистанция.</p></div>
+      <div class="card"><span class="card-icon">🌫️</span><h3>Fog / Time Changer</h3><p>Отключение тумана и смена времени суток для скриншотов.</p></div>
+      <div class="card"><span class="card-icon">🧱</span><h3>Item Physics</h3><p>Дропнутые предметы вращаются физично, а не парят.</p></div>
+      <div class="card"><span class="card-icon">🌊</span><h3>No Fluid</h3><p>Убирает оверлей воды и лавы на экране.</p></div>
+      <div class="card"><span class="card-icon">👹</span><h3>Totem Effect</h3><p>Кастомный визуал и звук при активации тотема.</p></div>
+      <div class="card"><span class="card-icon">✨</span><h3>World Particles</h3><p>Дополнительные частицы в мире для атмосферы.</p></div>
+      <div class="card"><span class="card-icon">🎵</span><h3>Music Display</h3><p>Показывает текущий трек в HUD.</p></div>
+      <div class="card"><span class="card-icon">🟣</span><h3>Watermark</h3><p>Твой ник и версия мода в углу экрана.</p></div>
+      <div class="card"><span class="card-icon">👥</span><h3>Friends</h3><p>Список друзей + защита от случайной атаки.</p></div>
+      <div class="card"><span class="card-icon">💬</span><h3>Chat Helper</h3><p>Фильтр чата, подсветка сообщений, триггеры.</p></div>
+      <div class="card"><span class="card-icon">⌨️</span><h3>Command Macros</h3><p>Макросы команд на бинды клавиш.</p></div>
+      <div class="card"><span class="card-icon">🛡️</span><h3>Armor HUD</h3><p>Броня, прочность, процент — всё на экране.</p></div>
+      <div class="card"><span class="card-icon">🔔</span><h3>Armor Pinger</h3><p>Оповещение, когда у врага сломана броня.</p></div>
+      <div class="card"><span class="card-icon">💎</span><h3>Crystal Render</h3><p>ESP и подсветка кристаллов Энда.</p></div>
+      <div class="card"><span class="card-icon">⚡</span><h3>Optimization</h3><p>Culling, лимит частиц, меньше нагрузки на FPS.</p></div>
+      <div class="card"><span class="card-icon">🎨</span><h3>HUD Editor</h3><p>Перетаскивай элементы мышью прямо в игре.</p></div>
+      <div class="card"><span class="card-icon">⚙️</span><h3>Configs</h3><p>Профили настроек под каждую версию и сервер.</p></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="about">
+      <h2 class="section-title">О моде</h2>
+      <p>Tupo Visual — лёгкий клиентский мод для Minecraft 1.21.1 на Fabric. Только визуал и удобство: ничего не ломает игру, работает на любых серверах, легко настраивается.</p>
+      <div class="stats">
+        <div><div class="stat-num">17</div><div class="stat-label">модулей</div></div>
+        <div><div class="stat-num">1.21.1</div><div class="stat-label">версия MC</div></div>
+        <div><div class="stat-num">0</div><div class="stat-label">лагов</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="download" style="text-align:center;">
+    <h2 class="section-title">Скачать</h2>
+    <p class="section-sub">Нужен Fabric Loader и Fabric API</p>
+    <a href="#" class="btn btn-primary">⬇ Скачать Tupo Visual v1.0.0</a>
+  </section>
+
+  <footer>
+    © 2026 Tupo Visual · сделано для <a href="#">Minecraft 1.21.1 Fabric</a>
+  </footer>
+</div>
+</body>
+</html>
